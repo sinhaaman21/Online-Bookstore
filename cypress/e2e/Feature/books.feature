@@ -53,7 +53,7 @@ Feature: Books API
         Then the response status should be 200
     ##Ideally the status code should be 404 but API is returning 200 on updating incorrect Id in PUT
 
-    Scenario: Try deleting a book with an invalid ID
+    Scenario: Edge Case - Try deleting a book with an invalid ID
         When I send a DELETE request to "/api/v1/Books/9999"
         Then the response status should be 200
     ##Ideally the status code should be 404 but API is returning 200 on deleting incorrect Id in DELETE
