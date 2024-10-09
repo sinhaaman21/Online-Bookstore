@@ -53,7 +53,7 @@ Then(/^the response should contain the (Books|Authors) details$/, (itemType) => 
 
 Then(/^the (Book|Author) should be (added|updated) successfully$/, (itemType) => {
   const key = itemType === 'Book' ? 'title' : 'firstName';
-  const expectedValue = itemType === 'Book' ? 'Automated Test Book' : 'John';
+  const expectedValue = itemType === 'Book' ? 'Automated Test Book' : 'TestFirstName';
   cy.get('@response').its('body').should('have.property', key, expectedValue);
 });
 
