@@ -1,9 +1,20 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress');
+const allureWriter = require('@shelex/cypress-allure-plugin/writer');
+const cucumber = require('cypress-cucumber-preprocessor').default
+
 
 module.exports = defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+    async setupNodeEvents(on, config) {
+      on('file:preprocessor', cucumber());
+      allureWriter(on, config);
+      return config;
     },
+    specPattern: 'cypress/e2e/**/*.feature',
   },
+  env: {
+    allureReuseAfterSpec: true,
+    allure: true,
+    allureResultsPath: 'cypress/results/allure'
+  }
 });

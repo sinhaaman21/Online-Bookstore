@@ -1,0 +1,6 @@
+{
+    "title": "Automated Test Book",
+    "description": "A book created via automated API test",
+    "pageCount": 120,
+    "excerpt": "Test book excerpt"
+  }

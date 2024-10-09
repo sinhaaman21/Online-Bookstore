@@ -1,0 +1,6 @@
+{
+  "id": "One",
+  "firstName": "Invalid",
+  "lastName": "Type",
+  "idBook": "StringInsteadOfNumber"
+}
