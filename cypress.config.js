@@ -11,6 +11,7 @@ module.exports = defineConfig({
       return config;
     },
     specPattern: 'cypress/e2e/**/*.feature',
+    
   },
   env: {
     allureReuseAfterSpec: true,
